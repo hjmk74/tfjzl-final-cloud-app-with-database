@@ -141,7 +141,7 @@
                 <!-- Collapsible exam section -->
                 <div id="exam" class="collapse mt-3">
 
-                    <form method="post" action="#">
+                    <form method="post" action="{% url 'onlinecourse:submit' course.id %}">
 
                         {% csrf_token %}
 
@@ -193,6 +193,10 @@
                         </div>
 
                         {% endfor %}
+
+                        <button type="submit" class="btn btn-primary">
+                            Submit Exam
+                        </button>
 
                     </form>
 
